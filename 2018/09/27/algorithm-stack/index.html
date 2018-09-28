@@ -108,20 +108,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Cowboy&#39;s Blog">
-<meta property="og:url" content="http://www.funycode.cn/index.html">
+  <meta name="description" content="概念栈（stack）又名堆栈，它是一种运算受限的线性表。其限制是仅允许在表的一端进行插入和删除运算。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。定义:栈是限定仅在表头进行插入(push)和删除(pop)操作的线性表。">
+<meta name="keywords" content="数据结构,cpp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="链式栈">
+<meta property="og:url" content="http://www.funycode.cn/2018/09/27/algorithm-stack/index.html">
 <meta property="og:site_name" content="Cowboy&#39;s Blog">
+<meta property="og:description" content="概念栈（stack）又名堆栈，它是一种运算受限的线性表。其限制是仅允许在表的一端进行插入和删除运算。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。定义:栈是限定仅在表头进行插入(push)和删除(pop)操作的线性表。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-27T13:02:40.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cowboy&#39;s Blog">
+<meta name="twitter:title" content="链式栈">
+<meta name="twitter:description" content="概念栈（stack）又名堆栈，它是一种运算受限的线性表。其限制是仅允许在表的一端进行插入和删除运算。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。定义:栈是限定仅在表头进行插入(push)和删除(pop)操作的线性表。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.funycode.cn/"/>
+  <link rel="canonical" href="http://www.funycode.cn/2018/09/27/algorithm-stack/"/>
 
 
 
@@ -131,7 +136,7 @@
   };
 </script>
 
-  <title>Cowboy's Blog</title>
+  <title>链式栈 | Cowboy's Blog</title>
   
 
 
@@ -178,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +220,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -276,9 +280,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -310,11 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/27/algorithm-stack/" itemprop="url">
-                  链式栈
-                </a>
+          <h1 class="post-title" itemprop="name headline">链式栈
               
             
           </h1>
@@ -395,13 +395,9 @@
       
 
       
-        
-          
-            <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>栈（stack）又名堆栈，它是一种运算受限的线性表。其限制是仅允许在表的一端进行插入和删除运算。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。<br><strong>定义:</strong>栈是限定仅在表头进行插入(push)和删除(pop)操作的线性表。<br>栈的特点用一句话总结就是<strong>后进先出</strong>。</p>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>栈（stack）又名堆栈，它是一种运算受限的线性表。其限制是仅允许在表的一端进行插入和删除运算。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。<br><strong>定义:</strong>栈是限定仅在表头进行插入(push)和删除(pop)操作的线性表。<br>栈的特点用一句话总结就是<strong>后进先出</strong>。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>栈分为顺序栈和链式栈，后面是栈的代码实现.</p>
 <h3 id="链式栈的C语言实现"><a href="#链式栈的C语言实现" class="headerlink" title="链式栈的C语言实现"></a>链式栈的C语言实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pTop</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pBottom</span>;</span></span><br><span class="line">&#125;Stack;</span><br><span class="line"></span><br><span class="line"><span class="function">Stack* <span class="title">create</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(Stack *, <span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(Stack *, <span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">(Stack *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(Stack *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">outPut</span><span class="params">(Stack *)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> data_pop;</span><br><span class="line">    Stack * pStack = create();</span><br><span class="line"></span><br><span class="line">    push(pStack, <span class="number">2</span>);</span><br><span class="line">    push(pStack, <span class="number">6</span>);</span><br><span class="line">    push(pStack, <span class="number">28</span>);</span><br><span class="line">    </span><br><span class="line">    outPut(pStack);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(pop(pStack, &amp;data_pop))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"pop success, %d \n"</span>, data_pop);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"pop failed"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    outPut(pStack);</span><br><span class="line"></span><br><span class="line">    clear(pStack);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"data cleard\n"</span>);</span><br><span class="line"></span><br><span class="line">    outPut(pStack);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Stack * <span class="title">create</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Stack * pRet = (Stack *) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Stack*));</span><br><span class="line">    pRet-&gt;pTop = (Node *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node *));</span><br><span class="line">    <span class="keyword">if</span>(!pRet || !pRet-&gt;pTop)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"malloc failed"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    pRet-&gt;pBottom = pRet-&gt;pTop;</span><br><span class="line">    pRet-&gt;pBottom-&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> pRet;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(Stack * pStack, <span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">    Node * pNode = (Node *) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node*));</span><br><span class="line">    <span class="keyword">if</span>(!pNode) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"malloc failed"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    pNode-&gt;data = val;</span><br><span class="line">    pNode-&gt;pNext = pStack-&gt;pTop;</span><br><span class="line">    pStack-&gt;pTop = pNode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(Stack * pStack , <span class="keyword">int</span> * pData)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(isEmpty(pStack)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    Node * pNode = pStack-&gt;pTop;</span><br><span class="line">    *pData = pNode-&gt;data;</span><br><span class="line">    pStack-&gt;pTop = pNode-&gt;pNext;</span><br><span class="line">    <span class="built_in">free</span>(pNode);</span><br><span class="line">    pNode = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">(Stack * pStack)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pStack-&gt;pTop == pStack-&gt;pBottom;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(Stack * pStack)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(isEmpty(pStack)) <span class="keyword">return</span>;</span><br><span class="line">    Node * pNode = pStack-&gt;pTop;</span><br><span class="line">    Node * pNext = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span>(pNode != pStack-&gt;pBottom)&#123;</span><br><span class="line">        pNext = pNode-&gt;pNext;</span><br><span class="line">        <span class="built_in">free</span>(pNode);</span><br><span class="line">        pNode = pNext;</span><br><span class="line">    &#125;</span><br><span class="line">    pStack-&gt;pTop = pStack-&gt;pBottom;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">outPut</span><span class="params">(Stack * pStack)</span></span>&#123;</span><br><span class="line">    Node * pCurrent = pStack-&gt;pTop;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Now datas in the stack are: \n"</span>);</span><br><span class="line">    <span class="keyword">while</span>(pCurrent != pStack-&gt;pBottom)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, pCurrent-&gt;data);</span><br><span class="line">        pCurrent = pCurrent-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\nOut put data end\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
 
@@ -419,348 +415,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.funycode.cn/2018/09/27/js-array/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="CowBoy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cowboy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/27/js-array/" itemprop="url">
-                  ES6-Array
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-27 20:37:42 / 修改时间：22:04:38" itemprop="dateCreated datePublished" datetime="2018-09-27T20:37:42+08:00">2018-09-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
-
+            <a href="/tags/cpp/" rel="tag"># cpp</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>filter方法会创建一个新的数组，新数组中的元素是通过检测指定数组中的所有元素获取的。<br><strong>注意:</strong></p>
-<ol>
-<li>不会对空数组进行检测</li>
-<li>不会改变原始数组<br>code:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> isBig = <span class="function">(<span class="params">current_value, index, array</span>)=&gt;</span> current_value &gt; <span class="number">2</span>;</span><br><span class="line"><span class="keyword">let</span> a1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> a2 = a1.filter(isBig, a1);</span><br><span class="line"><span class="built_in">console</span>.log(a1, a2);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>map是定义一个新的数组，新数组的元素是通过调用函数处理原数组得到的值<br><strong>注意:</strong></p>
-<ol>
-<li>不会对空数组进行检测</li>
-<li>不会修改原始数组</li>
-<li>新数组的长度等于原始数组的长度<br>code:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> a2 = a1.map(<span class="function"><span class="params">v</span>=&gt;</span>v*<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a1, a2);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="some"><a href="#some" class="headerlink" title="some"></a>some</h3><p>some 会检测数组中的元素是否满足条件(函数提供),会依次遍历数组的每个元素，如果，有一个元素满足条件则返回true,没有元素满足条件则返回false.<br>code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> b = a.some(<span class="function"><span class="params">v</span>=&gt;</span>v&gt;<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a, b);</span><br></pre></td></tr></table></figure></p>
-<h3 id="every"><a href="#every" class="headerlink" title="every"></a>every</h3><p>every用来检测数组中的所有元素是否满足指定条件(函数提供),如果有一个元素不满足条件则返回false,都满足则返回true.<br>code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> b = a.every(<span class="function"><span class="params">v</span>=&gt;</span>v &lt; <span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a, b);</span><br></pre></td></tr></table></figure></p>
-<h2 id="拓展运算符"><a href="#拓展运算符" class="headerlink" title="拓展运算符"></a>拓展运算符</h2><p>拓展运算符(spread)实际上就是…(三个点),下面说下拓展运算符的使用。</p>
-<h3 id="组合数组"><a href="#组合数组" class="headerlink" title="组合数组"></a>组合数组</h3><p>拓展运算符可以很简单的完成数组合并的操作。<br>code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> push = <span class="function">(<span class="params">arr, ...items</span>)=&gt;</span>arr.push(...items);</span><br><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">push(a, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="keyword">let</span> b = [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">a.push(...b);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></p>
-<h3 id="简化函数的参数"><a href="#简化函数的参数" class="headerlink" title="简化函数的参数"></a>简化函数的参数</h3><p>code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> add = <span class="function">(<span class="params">x, y</span>)=&gt;</span>x + y;</span><br><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">let</span> b = add(...a);</span><br><span class="line"><span class="built_in">console</span>.log(a, b);</span><br></pre></td></tr></table></figure></p>
-<h3 id="代替函数的apply方法"><a href="#代替函数的apply方法" class="headerlink" title="代替函数的apply方法"></a>代替函数的apply方法</h3><p>这个与上面的简化函数的参数实际上是一样的。<br>code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> f = <span class="function">(<span class="params">x,y,z</span>)=&gt;</span><span class="built_in">console</span>.log(x,y,z);</span><br><span class="line"><span class="keyword">let</span> args = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="comment">// es5 实现</span></span><br><span class="line">f.apply(<span class="literal">null</span>,args);</span><br><span class="line"><span class="comment">// es6 实现</span></span><br><span class="line">f(...args);</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.funycode.cn/2018/09/27/read-boot-nddlzm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="CowBoy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cowboy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/27/read-boot-nddlzm/" itemprop="url">
-                  你的灯亮着吗
-                </a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2018/09/27/js-array/" rel="next" title="ES6-Array">
+                <i class="fa fa-chevron-left"></i> ES6-Array
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-27 20:18:53 / 修改时间：20:30:03" itemprop="dateCreated datePublished" datetime="2018-09-27T20:18:53+08:00">2018-09-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/" itemprop="url" rel="index"><span itemprop="name">读书</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="你的灯亮着吗"><a href="#你的灯亮着吗" class="headerlink" title="你的灯亮着吗"></a>你的灯亮着吗</h1><p>问题就是理想状态和现实状态之间的差别<br>别去费力帮缺乏幽默感的人解决问题。<br>1.不要把别人的解决方法作为定义问题的方法。<br>2.如果你解决问题太过神速，别人根本不会相信你真的解决了问题<br>3 面对有利可图的问题时，道德考量可能就失效了<br>别把问题的解决方案误当作问题的定义，当这个解决方案是由你提出的时候尤其如此。<br>即使问题已经解决，你也无法确定你的问题定义是正确的。<br>不要仓促下结论，但也不要忽视第一印象。<br>你永远无法确定已经找到的问题定义是正确的，但是永远不要停下寻找正确定义的脚步。<br>每一个解决方案都是下一个问题的来源。<br>某些问题最困难的部分就在于发现问题存在。<br>看看你对问题的理解，如果想不出至少三个可能有出错的地方，你就没有真正理解这个问题。<br>每转换一次视角，都会发现新的不协调之处。<br>如果想得到不同的解决方案，该怎样变换问题的表述方式？<br>当你沿着定义问题的道路疲倦前行时，过一会儿就要回头看看，确认自己没有走错路。<br>当别人可以妥善解决自己的问题时，不要越俎代庖。<br>如果这是别人的问题，就把它当成是别人的问题。<br>如果一个人处于解决问题的位置，却并不受问题困扰，那就采取一些行动使他能亲身体验到问题。<br>为了改变局面，试着把责任归到自己身上——哪怕只有一会儿也行。<br>大多数情况下，问题的根源在你自己身上。<br>世界上有两种人，一种人做事，另一种人制造出事来让其他人做。远离那些找事让别人做的人，你就能好好过日子了<br>在大多数情况下，只要知道问题是什么，解决问题就是一件非常不值一提的事情。<br>无论表面上表现得如何，在你提供他们所要求的东西之前，他们极少知道自己想要什么。<br>从最后的情况看，想要真正解决问题的人并不是很多。  人们是不是真的想解决问题呢？<br>如果你是问题的解决者，问问自己 我真的想找到解决方案吗？<br>人们永远没有足够的时间把它做好，但永远有足够的时间重新来过。<br>人们永远没有足够的时间去考虑到底是不是想要它，但永远有足够的时间去为之后悔。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -770,14 +456,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -798,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -880,6 +576,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#链式栈的C语言实现"><span class="nav-number">2.1.</span> <span class="nav-text">链式栈的C语言实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1017,6 +729,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
