@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>代码味道</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="代码味道">
+  <title>HEXO使用 | 代码味道</title>
+  <meta name="keywords" content=" hexo ">
+  <meta name="description" content="HEXO使用 | 代码味道">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About me">
@@ -48,7 +48,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -187,12 +187,49 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-hexo-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text"></span></a></li></ol>
+        <h1 class="article-title">HEXO使用</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">hexo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-10-29 12:15:17'>2019-10-29 16:09</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建站"><span class="toc-text">建站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件介绍"><span class="toc-text">文件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-yml"><span class="toc-text">_config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#package-json"><span class="toc-text">package.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scaffolds"><span class="toc-text">scaffolds</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#source"><span class="toc-text">source</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#themes"><span class="toc-text">themes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令"><span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate"><span class="toc-text">generate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#publish"><span class="toc-text">publish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy"><span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#render"><span class="toc-text">render</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-text">clean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list"><span class="toc-text">list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#version"><span class="toc-text">version</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -205,10 +242,45 @@
     }
 </style>
 </div>
-            <h1 id=""><a href="#" class="headerlink" title=""></a></h1>
-        </article>
-        
-        
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>安装npm和git</li>
+<li>安装hexo-cli(hexo命令行工具):<code>npm install -g hexo-cli</code><h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2></li>
+<li>创建网站项目: <code>hexo init &lt;projectName&gt;</code></li>
+<li>进入项目文件夹: <code>cd &lt;projectName&gt;</code></li>
+<li>安装项目依赖: <code>npm install</code><h2 id="文件介绍"><a href="#文件介绍" class="headerlink" title="文件介绍"></a>文件介绍</h2><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3>网站的配置信息，在这里可以配置网站的大部分信息<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3>项目的依赖信息<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3>模版文件夹，新建文章时会根据<code>scaffolds</code>来建立文件<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3>存放用户资源的文件<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3>放主题的文件夹<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3>新建一篇文章<br><code>hexo new &lt;layout&gt; &lt;title&gt;</code><br><code>layout</code>:<br><code>title</code>:文章标题，当标题中包含空格时用双引号包含<code>hexo new &quot;new page view&quot;</code><h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3>生成静态文件<br><code>hexo generate</code>或者<code>hexo g</code><h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3>发表草稿<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><code>hexo server</code><br>本地预览<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3>部署网站<br><code>hexo deploy</code>或者<code>hexo d</code><h3 id="render"><a href="#render" class="headerlink" title="render"></a>render</h3><code>hexo render &lt;file1&gt; [file2] -o/--output &lt;输出路径&gt;</code><h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><code>hexo clean</code><br>清除缓存(db.json)和public生成的静态文件<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><code>hexo list &lt;type&gt;</code><br>列出网站资料<code>hexo list post</code><h3 id="version"><a href="#version" class="headerlink" title="version"></a>version</h3><code>hexo version</code><br>获取hexo版本</li>
+</ol>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达,可以在下面评论区评论. </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>HEXO使用</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="CowBoy">CowBoy</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-10-29, 16:09:26</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-29, 12:15:17</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/30/hexo-tutorial/" title="HEXO使用">https://luningcowboy.github.io/2019/10/30/hexo-tutorial/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 CowBoy</p>
