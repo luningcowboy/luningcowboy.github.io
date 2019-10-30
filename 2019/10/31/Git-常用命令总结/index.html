@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>CMake:学习笔记 | 代码味道</title>
-  <meta name="keywords" content=" 笔记 , CMake , C , CPP ">
-  <meta name="description" content="CMake:学习笔记 | 代码味道">
+  <title>Git:常用命令总结 | 代码味道</title>
+  <meta name="keywords" content=" Git ">
+  <meta name="description" content="Git:常用命令总结 | 代码味道">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Me">
@@ -269,9 +269,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-CMake-学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Git-常用命令总结" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">CMake:学习笔记</h1>
+        <h1 class="article-title">Git:常用命令总结</h1>
     
     <div class="article-meta">
         
@@ -280,20 +280,14 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">笔记</a>
-            
-            <a href="javascript:" class="color1">CMake</a>
-            
-            <a href="javascript:" class="color2">C</a>
-            
-            <a href="javascript:" class="color4">CPP</a>
+            <a href="javascript:" class="color4">Git</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-30 14:32:42'>2019-10-30 22:25</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-30 14:42:53'>2019-10-30 22:42</time>
         
     </div>
     <div class="article-meta">
@@ -315,7 +309,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是CMake"><span class="toc-text">什么是CMake</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linux下CMake编译流程"><span class="toc-text">linux下CMake编译流程:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译单个文件"><span class="toc-text">编译单个文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令介绍"><span class="toc-text">命令介绍:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译"><span class="toc-text">编译:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个源文件"><span class="toc-text">多个源文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个目录多个源文件"><span class="toc-text">多个目录多个源文件</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -331,34 +325,63 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是CMake"><a href="#什么是CMake" class="headerlink" title="什么是CMake"></a>什么是CMake</h2><p>编写平台无关的CMakeLists.txt文件来定制整个编译流程，再根据目标用户的平台进一步生成本地化的Makefile和工程文件。</p>
-<h3 id="linux下CMake编译流程"><a href="#linux下CMake编译流程" class="headerlink" title="linux下CMake编译流程:"></a>linux下CMake编译流程:</h3><ol>
-<li>编写CMakeLists.txt</li>
-<li>执行命令<code>cmake PATH</code>或者<code>ccmake PATH</code>生成Makefile,其中<code>PATH</code>是CMakeLists.txt所在的目录。</li>
-<li>使用<code>make</code>命令进行编译</li>
+        <ol>
+<li><code>git init</code>将这个目录修改为git可以管理的仓库</li>
+<li><code>git add file_name</code>添加一个文件, 可以同时添加多个文件<code>git add file_1 file_2</code></li>
+<li><code>git commit -m &quot;addxxxxx&quot;</code>提交一个修改</li>
+<li><code>git status</code> 查看修改状态</li>
+<li><code>git diff file_name</code> 查看修改内容，可以不跟文件名，直接返回所有的修改内容<code>git diff</code></li>
+<li><code>git log</code> 查看提交日志</li>
+<li><code>git log --pretty=oneline</code> 提交日志在一行显示</li>
+<li><code>git reset</code>版本回退 <code>git reset --hard HEAD^</code>回退一个版本</li>
+<li><code>git reset --hard 版本号</code> 回退到指定版本</li>
+<li><code>git reflog</code> 查看所有的<code>commit</code>日志，包括回退版本</li>
+<li><code>git diff HEAD -- readme.txt</code> 查看工作区和版本库中最新版本的区别</li>
+<li><code>git checkout -- readme.txt</code> 放弃工作区的修改</li>
+<li><code>git reset HEAD &lt;file&gt;</code> 方式提交的暂存区的修改, 如果要彻底放弃修改还需要<code>git checkout -- &lt;file&gt;</code>放弃工作区的修改</li>
+<li><code>git rm &lt;file&gt;</code>删除文件</li>
+<li><code>git checkout -- &lt;file&gt;</code> 可以直接中版本库中拉下来误删的文件</li>
+<li><code>git remote add origin git@github.com:luningcowboy/learnGit.git</code> 链接远程仓库</li>
+<li><code>git push -u origin master</code> 把本地仓库推送到远程仓库</li>
+<li><code>git clone &lt;url&gt;</code> 将l远程仓库拉取到本地</li>
+<li><code>git checkout -b dev</code>创建dev分支，这个命令相当于运行了<code>git branch dev</code>和<code>git checkout dev</code></li>
+<li><code>git checkout master</code> 切换到master分支</li>
+<li><code>git merge dev</code> 合并dev分支到master</li>
+<li><code>git branch -d dev</code> 删除dev分支</li>
+<li><code>git branch</code> 查看已经有的分支</li>
+<li><code>git merge --no-ff -m &quot;merge --no-ff&quot; dev</code> 合并分支并禁用<code>Fast forward</code>模式,这样合并的时候会有一个<code>commit</code>,<code>-m</code>后就是合并的日志</li>
+<li><code>git stash</code> 把当前工作现场储藏起来，等以后回复现场后继续工作.</li>
+<li><code>git stash list</code> 查看存储的工作列表</li>
+<li>恢复工作现场:<ol>
+<li><code>git stash apply</code> 恢复，<code>git stash drop</code> 删除</li>
+<li><code>git stash pop</code></li>
 </ol>
-<p>CMakeLists.txt的语法比较简单，由命令，注释和空格组成，其中命令是不区分大小写。<code>#</code>后的内容被认为是注释。<br>命令由命令名称，小括号和参数组成，参数之间通过空格进行间隔。</p>
-<h2 id="编译单个文件"><a href="#编译单个文件" class="headerlink" title="编译单个文件"></a>编译单个文件</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.cc</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">power</span><span class="params">(<span class="keyword">double</span> base, <span class="keyword">int</span> exponent)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> result = base;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">if</span> (exponent == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; exponent; ++i)&#123;</span><br><span class="line">        result = result * base;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(argc &lt; <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Usage: %s base exponent \n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">double</span> base = atof(argv[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">int</span> exponent = atoi(argv[<span class="number">2</span>]);</span><br><span class="line">    <span class="keyword">double</span> result = power(base, exponent);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%g ^ %d is %g\n"</span>, base, exponent, result);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># CMakeLists.txt</span><br><span class="line"># CMake 最低版本要求</span><br><span class="line">cmake_minimm_required (VERSION 2.8)</span><br><span class="line"># 项目信息</span><br><span class="line">project(demo1)</span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable(demo main.cc)</span><br></pre></td></tr></table></figure>
-<h3 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍:"></a>命令介绍:</h3><ol>
-<li><code>cmake_minimm_required</code>: 指定运行此配置所需要的CMake的最低版本</li>
-<li><code>project</code>: 参数是<code>demo1</code>,表示项目的名称是<code>demo1</code></li>
-<li><code>add_executable</code>: 将名为<code>main.cc</code>的源文件编译为一个名为<code>demo1</code>的可执行文件</li>
+</li>
+<li><code>git stash apply stash@{0}</code> 恢复指定的<code>stash</code></li>
+<li><code>git branch -D &lt;branch-name&gt;</code> 分支没合并的时候强行删除分支</li>
+<li><code>git remote</code> 查看远程仓库的信息</li>
+<li><code>git push origin &lt;branch-name&gt;</code> 推送本地分支到远程</li>
+<li><code>git branch --set-upstream-to=origin/dev dev</code> 绑定本地<code>dev</code>分支和远程<code>dev</code>分支</li>
+<li><code>git pull</code> 下拉最新的远程分支</li>
+<li><code>git remote -v</code> 查看远程仓库的信息</li>
+<li><code>git log --graph --pretty=oneline --abbrev-commit</code> 查看版本仓库的log, 有图形</li>
+<li><code>git rebase</code> 把分叉的提交历史整理成一条直线，看上去更直观，缺点是本地发分支提交已经被修改过了。</li>
+<li><code>git tag &lt;version-name&gt;</code> 打版本,方便查找回退</li>
+<li><code>git tag &lt;version-name&gt; &lt;uid&gt;</code> 给指定版本打tag</li>
+<li><code>git tag -a v0.1 -m &quot;version 0.1 released&quot; 1094adb</code> 创建有说明的tag</li>
+<li><code>git tag</code> 查看已经有的tag</li>
+<li><code>git show &lt;tag-name&gt;</code> 查看指定的tag信息</li>
+<li><code>git tag -d &lt;tag-name&gt;</code> 删除指定tag</li>
+<li><code>git push origin &lt;tag-name&gt;</code> 推送标签到远程仓库</li>
+<li>从远程仓库删除tag:<ol>
+<li>先从本地删除tag<code>git tag -d &lt;tag-name&gt;</code></li>
+<li>从远程仓库删除tag <code>git push origin :refs/tags/&lt;tag-name&gt;</code></li>
 </ol>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译:"></a>编译:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake .</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<h2 id="多个源文件"><a href="#多个源文件" class="headerlink" title="多个源文件"></a>多个源文件</h2><p>目录:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./demo2</span><br><span class="line">    main.cc</span><br><span class="line">    MathFunctions.cc</span><br><span class="line">    MathFunctions.h</span><br></pre></td></tr></table></figure>
-<p>CMakeLists.txt</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置CMake最低版本号</span></span><br><span class="line">cmake_minimum_required (VERSION 2.8)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置项目名称</span></span><br><span class="line">project(demo2)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查找目录下所有的源文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 并将名称保存到 DIR_SRCS 变量</span></span><br><span class="line">aux_source_directory(. DIR_SRCS)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定生成目标</span></span><br><span class="line">add_executable(demo2 $&#123;DIR_SRCS&#125;)</span><br></pre></td></tr></table></figure>
-<p><code>aux_source_directory(PATH NAME)</code>读取<code>PATH</code>下的文件保存到<code>NAME</code>变量中.<br><code>add_executable(OUT_PUT NAME)</code> <code>OUT_PUT</code>输出的文件,<code>NAME</code>需要编译的文件</p>
-<h2 id="多个目录多个源文件"><a href="#多个目录多个源文件" class="headerlink" title="多个目录多个源文件"></a>多个目录多个源文件</h2><p>在每个目录下都写一个CMakeLists.txt文件来复制编译。<br>目录:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./demo3</span><br><span class="line">    math/</span><br><span class="line">        MathFunctions.cc</span><br><span class="line">        MathFunctions.h</span><br><span class="line">    main.cc</span><br></pre></td></tr></table></figure>
-<p>CMakeLists.txt</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置CMake最低版本号</span></span><br><span class="line">cmake_minimum_required(VERSION 2.8)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置项目名称</span></span><br><span class="line">project(demo3)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查找目标目录下所有的文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 并将名称保存到DIR_SRCS变量中</span></span><br><span class="line">aux_source_directory(. DIR_SRCS)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加math子目录</span></span><br><span class="line">add_subdirectory(math)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定生成目录</span></span><br><span class="line">add_executable(demo $&#123;DIR_SRCS&#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加链接库</span></span><br><span class="line">target_link_libraries(demo MathFunctions)</span><br></pre></td></tr></table></figure>
-<p>math/CMakeLists.txt</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查找当前目录下所有的源文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 并添加到DIR_LIB_SRCS变量中</span></span><br><span class="line">aux_source_directory(. DIR_LIB_SRCS)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定生成MathFunctions链接库</span></span><br><span class="line">add_library(MathFunctions $&#123;DIR_LIB_SRCS&#125;)</span><br></pre></td></tr></table></figure>
-
+</li>
+</ol>
+<blockquote>
+<p>每一次<code>commit</code>之前都需要先<code>add</code><br><code>git reset</code>既可以回退版本，也可以将暂存区的修改回退到工作区</p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达,可以在下面评论区评论. </span>
@@ -368,12 +391,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>CMake:学习笔记</p>
+    <p><span class="copy-title">文章标题:</span>Git:常用命令总结</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="CowBoy">CowBoy</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-30, 22:25:53</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-30, 14:32:42</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/31/CMake-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="CMake:学习笔记">https://luningcowboy.github.io/2019/10/31/CMake-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-30, 22:42:31</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-30, 14:42:53</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/31/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" title="Git:常用命令总结">https://luningcowboy.github.io/2019/10/31/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
