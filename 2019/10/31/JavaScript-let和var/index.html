@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Git:常用命令总结 | 代码味道</title>
-  <meta name="keywords" content=" Git ">
-  <meta name="description" content="Git:常用命令总结 | 代码味道">
+  <title>JavaScript:let和var | 代码味道</title>
+  <meta name="keywords" content=" JavaScript , let , var ">
+  <meta name="description" content="JavaScript:let和var | 代码味道">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Me">
@@ -305,9 +305,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Git-常用命令总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-JavaScript-let和var" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Git:常用命令总结</h1>
+        <h1 class="article-title">JavaScript:let和var</h1>
     
     <div class="article-meta">
         
@@ -316,14 +316,18 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">Git</a>
+            <a href="javascript:" class="color1">JavaScript</a>
+            
+            <a href="javascript:" class="color4">let</a>
+            
+            <a href="javascript:" class="color4">var</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-30 14:42:53'>2019-10-30 22:42</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-31 05:58:09'>2019-10-31 13:57</time>
         
     </div>
     <div class="article-meta">
@@ -345,7 +349,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#let和var"><span class="toc-text">let和var</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于变量提升"><span class="toc-text">关于变量提升</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暂时性死区"><span class="toc-text">暂时性死区</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#隐蔽的TDZ"><span class="toc-text">隐蔽的TDZ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不允许重复声明"><span class="toc-text">不允许重复声明</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -361,63 +365,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><code>git init</code>将这个目录修改为git可以管理的仓库</li>
-<li><code>git add file_name</code>添加一个文件, 可以同时添加多个文件<code>git add file_1 file_2</code></li>
-<li><code>git commit -m &quot;addxxxxx&quot;</code>提交一个修改</li>
-<li><code>git status</code> 查看修改状态</li>
-<li><code>git diff file_name</code> 查看修改内容，可以不跟文件名，直接返回所有的修改内容<code>git diff</code></li>
-<li><code>git log</code> 查看提交日志</li>
-<li><code>git log --pretty=oneline</code> 提交日志在一行显示</li>
-<li><code>git reset</code>版本回退 <code>git reset --hard HEAD^</code>回退一个版本</li>
-<li><code>git reset --hard 版本号</code> 回退到指定版本</li>
-<li><code>git reflog</code> 查看所有的<code>commit</code>日志，包括回退版本</li>
-<li><code>git diff HEAD -- readme.txt</code> 查看工作区和版本库中最新版本的区别</li>
-<li><code>git checkout -- readme.txt</code> 放弃工作区的修改</li>
-<li><code>git reset HEAD &lt;file&gt;</code> 方式提交的暂存区的修改, 如果要彻底放弃修改还需要<code>git checkout -- &lt;file&gt;</code>放弃工作区的修改</li>
-<li><code>git rm &lt;file&gt;</code>删除文件</li>
-<li><code>git checkout -- &lt;file&gt;</code> 可以直接中版本库中拉下来误删的文件</li>
-<li><code>git remote add origin git@github.com:luningcowboy/learnGit.git</code> 链接远程仓库</li>
-<li><code>git push -u origin master</code> 把本地仓库推送到远程仓库</li>
-<li><code>git clone &lt;url&gt;</code> 将l远程仓库拉取到本地</li>
-<li><code>git checkout -b dev</code>创建dev分支，这个命令相当于运行了<code>git branch dev</code>和<code>git checkout dev</code></li>
-<li><code>git checkout master</code> 切换到master分支</li>
-<li><code>git merge dev</code> 合并dev分支到master</li>
-<li><code>git branch -d dev</code> 删除dev分支</li>
-<li><code>git branch</code> 查看已经有的分支</li>
-<li><code>git merge --no-ff -m &quot;merge --no-ff&quot; dev</code> 合并分支并禁用<code>Fast forward</code>模式,这样合并的时候会有一个<code>commit</code>,<code>-m</code>后就是合并的日志</li>
-<li><code>git stash</code> 把当前工作现场储藏起来，等以后回复现场后继续工作.</li>
-<li><code>git stash list</code> 查看存储的工作列表</li>
-<li>恢复工作现场:<ol>
-<li><code>git stash apply</code> 恢复，<code>git stash drop</code> 删除</li>
-<li><code>git stash pop</code></li>
-</ol>
-</li>
-<li><code>git stash apply stash@{0}</code> 恢复指定的<code>stash</code></li>
-<li><code>git branch -D &lt;branch-name&gt;</code> 分支没合并的时候强行删除分支</li>
-<li><code>git remote</code> 查看远程仓库的信息</li>
-<li><code>git push origin &lt;branch-name&gt;</code> 推送本地分支到远程</li>
-<li><code>git branch --set-upstream-to=origin/dev dev</code> 绑定本地<code>dev</code>分支和远程<code>dev</code>分支</li>
-<li><code>git pull</code> 下拉最新的远程分支</li>
-<li><code>git remote -v</code> 查看远程仓库的信息</li>
-<li><code>git log --graph --pretty=oneline --abbrev-commit</code> 查看版本仓库的log, 有图形</li>
-<li><code>git rebase</code> 把分叉的提交历史整理成一条直线，看上去更直观，缺点是本地发分支提交已经被修改过了。</li>
-<li><code>git tag &lt;version-name&gt;</code> 打版本,方便查找回退</li>
-<li><code>git tag &lt;version-name&gt; &lt;uid&gt;</code> 给指定版本打tag</li>
-<li><code>git tag -a v0.1 -m &quot;version 0.1 released&quot; 1094adb</code> 创建有说明的tag</li>
-<li><code>git tag</code> 查看已经有的tag</li>
-<li><code>git show &lt;tag-name&gt;</code> 查看指定的tag信息</li>
-<li><code>git tag -d &lt;tag-name&gt;</code> 删除指定tag</li>
-<li><code>git push origin &lt;tag-name&gt;</code> 推送标签到远程仓库</li>
-<li>从远程仓库删除tag:<ol>
-<li>先从本地删除tag<code>git tag -d &lt;tag-name&gt;</code></li>
-<li>从远程仓库删除tag <code>git push origin :refs/tags/&lt;tag-name&gt;</code></li>
-</ol>
-</li>
-</ol>
-<blockquote>
-<p>每一次<code>commit</code>之前都需要先<code>add</code><br><code>git reset</code>既可以回退版本，也可以将暂存区的修改回退到工作区</p>
-</blockquote>
+        <h2 id="let和var"><a href="#let和var" class="headerlink" title="let和var"></a><code>let</code>和<code>var</code></h2><p><code>let</code>类似<code>var</code>的用法，但是，所声明的变量，只在<code>let</code>命令所在的代码块内有效。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="comment">//console.log(b); //ERROR: b is not defined</span></span><br></pre></td></tr></table></figure>
+<p>上面的代码中<code>console.log(b)</code>运行会报错，提示<code>b is not defined</code>.</p>
+<h3 id="关于变量提升"><a href="#关于变量提升" class="headerlink" title="关于变量提升"></a>关于变量提升</h3><p><code>var</code>命令会发生变量提升的现象，即变量可以在声明之前使用，值为<code>undefined</code>.这有点不和逻辑，<br>为了修改这种问题，<code>let</code>修改了这种语法行为，它所声明的变量只能在声明后使用，否则会报错。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(d);</span><br><span class="line"><span class="comment">//let d = 11; //ReferenceError: d is not defined</span></span><br></pre></td></tr></table></figure>
+<h3 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h3><p>只要块级作用域内存在<code>let</code>命令，它所声明的变量就”绑定”(binding)这个区域，不再受外界影响。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">    tmp = <span class="string">'abc'</span>;<span class="comment">//ReferenceError: tmp is not defined</span></span><br><span class="line">    <span class="keyword">let</span> tmp = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在代码块内，使用<code>let</code>命令声明变量之前，该变量是不可以用的，这在语法上称之为“暂时性死区”(temporal dead zone , TDZ).</p>
+<h4 id="隐蔽的TDZ"><a href="#隐蔽的TDZ" class="headerlink" title="隐蔽的TDZ"></a>隐蔽的TDZ</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">x = y , y = <span class="number">1</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [x, y];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(bar(<span class="number">1</span>,<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<p>上面的代码应该是会报错的，因为，x在y使用前调用了y,也就是y还没有声明就调用了y.但是某些时候也不报错，跟底层实现有关系。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = x;<span class="comment">//SyntaxError: Identifier 'x' has already been declared</span></span><br></pre></td></tr></table></figure>
+<p>上面的代码也会报错，因为，调用的时候x还没有声明。</p>
+<h4 id="不允许重复声明"><a href="#不允许重复声明" class="headerlink" title="不允许重复声明"></a>不允许重复声明</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">2</span>;<span class="comment">//报错</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">arg</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arg;<span class="comment">//报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>let</code>不允许在相同的作用域内，重复声明同一个变量。<br>我在node中测试就没有报错，不过还是避免这种使用为好。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达,可以在下面评论区评论. </span>
@@ -427,12 +388,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Git:常用命令总结</p>
+    <p><span class="copy-title">文章标题:</span>JavaScript:let和var</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="CowBoy">CowBoy</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-30, 22:42:31</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-30, 14:42:53</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/31/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" title="Git:常用命令总结">https://luningcowboy.github.io/2019/10/31/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-31, 13:57:38</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-31, 05:58:09</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/31/JavaScript-let%E5%92%8Cvar/" title="JavaScript:let和var">https://luningcowboy.github.io/2019/10/31/JavaScript-let%E5%92%8Cvar/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
