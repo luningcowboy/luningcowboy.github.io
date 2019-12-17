@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Git:常用命令总结 | 代码味道</title>
-  <meta name="keywords" content=" Git ">
-  <meta name="description" content="Git:常用命令总结 | 代码味道">
+  <title>命令模式 | 代码味道</title>
+  <meta name="keywords" content=" 设计模式 , 命令模式 ">
+  <meta name="description" content="命令模式 | 代码味道">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="职业:游戏开发工程师">
 <meta property="og:type" content="website">
@@ -347,9 +347,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Git-常用命令总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="设计模式-命令模式" class="article article-type-设计模式" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Git:常用命令总结</h1>
+        <h1 class="article-title">命令模式</h1>
     
     <div class="article-meta">
         
@@ -358,14 +358,16 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">Git</a>
+            <a href="javascript:" class="color5">设计模式</a>
+            
+            <a href="javascript:" class="color5">命令模式</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-30 14:42:53'>2019-10-30 22:42</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-17 02:18:30'>2019-12-17 10:16</time>
         
     </div>
     <div class="article-meta">
@@ -403,64 +405,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><code>git init</code>将这个目录修改为git可以管理的仓库</li>
-<li><code>git add file_name</code>添加一个文件, 可以同时添加多个文件<code>git add file_1 file_2</code></li>
-<li><code>git commit -m &quot;addxxxxx&quot;</code>提交一个修改</li>
-<li><code>git status</code> 查看修改状态</li>
-<li><code>git diff file_name</code> 查看修改内容，可以不跟文件名，直接返回所有的修改内容<code>git diff</code></li>
-<li><code>git log</code> 查看提交日志</li>
-<li><code>git log --pretty=oneline</code> 提交日志在一行显示</li>
-<li><code>git reset</code>版本回退 <code>git reset --hard HEAD^</code>回退一个版本</li>
-<li><code>git reset --hard 版本号</code> 回退到指定版本</li>
-<li><code>git reflog</code> 查看所有的<code>commit</code>日志，包括回退版本</li>
-<li><code>git diff HEAD -- readme.txt</code> 查看工作区和版本库中最新版本的区别</li>
-<li><code>git checkout -- readme.txt</code> 放弃工作区的修改</li>
-<li><code>git reset HEAD &lt;file&gt;</code> 方式提交的暂存区的修改, 如果要彻底放弃修改还需要<code>git checkout -- &lt;file&gt;</code>放弃工作区的修改</li>
-<li><code>git rm &lt;file&gt;</code>删除文件</li>
-<li><code>git checkout -- &lt;file&gt;</code> 可以直接中版本库中拉下来误删的文件</li>
-<li><code>git remote add origin git@github.com:luningcowboy/learnGit.git</code> 链接远程仓库</li>
-<li><code>git push -u origin master</code> 把本地仓库推送到远程仓库</li>
-<li><code>git clone &lt;url&gt;</code> 将l远程仓库拉取到本地</li>
-<li><code>git checkout -b dev</code>创建dev分支，这个命令相当于运行了<code>git branch dev</code>和<code>git checkout dev</code></li>
-<li><code>git checkout master</code> 切换到master分支</li>
-<li><code>git merge dev</code> 合并dev分支到master</li>
-<li><code>git branch -d dev</code> 删除dev分支</li>
-<li><code>git branch</code> 查看已经有的分支</li>
-<li><code>git merge --no-ff -m &quot;merge --no-ff&quot; dev</code> 合并分支并禁用<code>Fast forward</code>模式,这样合并的时候会有一个<code>commit</code>,<code>-m</code>后就是合并的日志</li>
-<li><code>git stash</code> 把当前工作现场储藏起来，等以后回复现场后继续工作.</li>
-<li><code>git stash list</code> 查看存储的工作列表</li>
-<li>恢复工作现场:<ol>
-<li><code>git stash apply</code> 恢复，<code>git stash drop</code> 删除</li>
-<li><code>git stash pop</code></li>
-</ol>
-</li>
-<li><code>git stash apply stash@{0}</code> 恢复指定的<code>stash</code></li>
-<li><code>git branch -D &lt;branch-name&gt;</code> 分支没合并的时候强行删除分支</li>
-<li><code>git remote</code> 查看远程仓库的信息</li>
-<li><code>git push origin &lt;branch-name&gt;</code> 推送本地分支到远程</li>
-<li><code>git branch --set-upstream-to=origin/dev dev</code> 绑定本地<code>dev</code>分支和远程<code>dev</code>分支</li>
-<li><code>git pull</code> 下拉最新的远程分支</li>
-<li><code>git remote -v</code> 查看远程仓库的信息</li>
-<li><code>git log --graph --pretty=oneline --abbrev-commit</code> 查看版本仓库的log, 有图形</li>
-<li><code>git rebase</code> 把分叉的提交历史整理成一条直线，看上去更直观，缺点是本地发分支提交已经被修改过了。</li>
-<li><code>git tag &lt;version-name&gt;</code> 打版本,方便查找回退</li>
-<li><code>git tag &lt;version-name&gt; &lt;uid&gt;</code> 给指定版本打tag</li>
-<li><code>git tag -a v0.1 -m &quot;version 0.1 released&quot; 1094adb</code> 创建有说明的tag</li>
-<li><code>git tag</code> 查看已经有的tag</li>
-<li><code>git show &lt;tag-name&gt;</code> 查看指定的tag信息</li>
-<li><code>git tag -d &lt;tag-name&gt;</code> 删除指定tag</li>
-<li><code>git push origin &lt;tag-name&gt;</code> 推送标签到远程仓库</li>
-<li>从远程仓库删除tag:<ol>
-<li>先从本地删除tag<code>git tag -d &lt;tag-name&gt;</code></li>
-<li>从远程仓库删除tag <code>git push origin :refs/tags/&lt;tag-name&gt;</code></li>
-</ol>
-</li>
-</ol>
-<blockquote>
-<p>每一次<code>commit</code>之前都需要先<code>add</code><br><code>git reset</code>既可以回退版本，也可以将暂存区的修改回退到工作区</p>
-</blockquote>
-
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达,可以在下面评论区评论. </span>
     </div>
@@ -469,12 +414,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Git:常用命令总结</p>
+    <p><span class="copy-title">文章标题:</span>命令模式</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="CowBoy">CowBoy</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-30, 22:42:31</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-30, 14:42:53</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/31/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" title="Git:常用命令总结">https://luningcowboy.github.io/2019/10/31/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-17, 10:16:53</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-17, 02:18:30</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/17/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" title="命令模式">https://luningcowboy.github.io/2019/12/17/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
