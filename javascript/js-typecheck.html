@@ -1,0 +1,688 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>类型判断 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../data-struct/" />
+    
+    
+    <link rel="prev" href="js-var-let.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../design-pattern/">
+            
+                <a href="../design-pattern/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../design-pattern/design-command.html">
+            
+                <a href="../design-pattern/design-command.html">
+            
+                    
+                    命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../design-pattern/design-flyweight.html">
+            
+                <a href="../design-pattern/design-flyweight.html">
+            
+                    
+                    享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../design-pattern/design-ocp.html">
+            
+                <a href="../design-pattern/design-ocp.html">
+            
+                    
+                    开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="js-var-let.html">
+            
+                <a href="js-var-let.html">
+            
+                    
+                    var 和 let
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="js-typecheck.html">
+            
+                <a href="js-typecheck.html">
+            
+                    
+                    类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../data-struct/">
+            
+                <a href="../data-struct/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../cocoscreator/">
+            
+                <a href="../cocoscreator/">
+            
+                    
+                    CocosCreator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cocoscreator/modify-cocoscreator-web.html">
+            
+                <a href="../cocoscreator/modify-cocoscreator-web.html">
+            
+                    
+                    修改CocosCreator预览网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../c-sharp/">
+            
+                <a href="../c-sharp/">
+            
+                    
+                    C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../others/">
+            
+                <a href="../others/">
+            
+                    
+                    未分类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../others/cmake-tutor.html">
+            
+                <a href="../others/cmake-tutor.html">
+            
+                    
+                    CMake学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../others/git-commands.html">
+            
+                <a href="../others/git-commands.html">
+            
+                    
+                    Git命令总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../others/svn-cmd-add.html">
+            
+                <a href="../others/svn-cmd-add.html">
+            
+                    
+                    svn-add批量脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../others/get-wxgame-code.html">
+            
+                <a href="../others/get-wxgame-code.html">
+            
+                    
+                    获取微信小游戏源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >类型判断</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x7406;&#x8BBA;&#x4E0A;&#x6765;&#x8BF4;js&#x4E2D;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x9760;&#x8C31;&#x7684;&#x4E1C;&#x897F;&#x3002;
+&#x901A;&#x5E38;&#x7528;&#x4F5C;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#x7684;&#x65B9;&#x6CD5;:<code>instanceof</code>&#x548C;<code>typeof</code>&#x3002;</p>
+<h2 id="typeof"><a name="typeof" class="anchor-navigation-ex-anchor" href="#typeof"><i class="fa fa-link" aria-hidden="true"></i></a><code>typeof</code></h2>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x6765;&#x8BF4;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;.
+&#x8FD4;&#x56DE;&#x7ED3;&#x679C;:<code>number, boolean, string, function, object, undefined</code>
+&#x901A;&#x5E38;&#x7528;<code>typeof</code>&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x5B58;&#x5728;:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">!=</span> <span class="token string">&apos;undefined&apos;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// do something</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// do something</span>
+    <span class="token comment">// a &#x4E0D;&#x5B58;&#x5728;&#x53EF;&#x80FD;&#x62A5;&#x9519;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5C40;&#x9650;&#x6027;:
+<code>Array,Null</code>&#x7B49;&#x7279;&#x6B8A;&#x5BF9;&#x8C61;&#x4F7F;&#x7528;<code>typeof</code>&#x4E00;&#x5F8B;&#x8FD4;&#x56DE;<code>object</code>,&#x8FD9;&#x4E2A;&#x5F88;&#x5751;&#x7239;&#x3002;</p>
+<h2 id="instanceof"><a name="instanceof" class="anchor-navigation-ex-anchor" href="#instanceof"><i class="fa fa-link" aria-hidden="true"></i></a><code>instanceof</code></h2>
+<p>&#x7528;&#x6765;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x5C5E;&#x4E8E;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre class="language-"><code class="lang-js">a <span class="token keyword">instanceof</span> <span class="token class-name">b</span> <span class="token operator">?</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;true&quot;</span><span class="token punctuation">)</span> <span class="token operator">:</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;false&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;<code>a instanceof Object</code>&#x548C;<code>a instanceof Array</code>&#x90FD;&#x662F;<code>true</code>,&#x8FD9;&#x662F;&#x56E0;&#x4E3A;<code>Array</code>&#x662F;<code>Object</code>&#x7684;&#x5B50;&#x7C7B;.</p>
+<h2 id="&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x578B;&#x5224;&#x65AD;"><a name="&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x578B;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x578B;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x578B;&#x5224;&#x65AD;</h2>
+<h3 id="&#x4F7F;&#x7528;contructor&#x5224;&#x65AD;"><a name="&#x4F7F;&#x7528;contructor&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;contructor&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;<code>contructor</code>&#x5224;&#x65AD;</h3>
+<pre class="language-"><code class="lang-js"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array<span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Object<span class="token punctuation">;</span> <span class="token comment">// false</span>
+<span class="token string">&quot;str&quot;</span><span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> String<span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span><span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Boolean<span class="token punctuation">;</span> <span class="token comment">// true</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">testF</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;testF&quot;</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// &#x51FD;&#x6570;</span>
+testF<span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Function<span class="token punctuation">;</span> <span class="token comment">// true</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">testF2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;testF2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</span>
+testF2<span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Function<span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token number">NaN</span><span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Number<span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token number">1.</span>__proto__<span class="token punctuation">;</span> <span class="token comment">// Uncaught SyntaxError: Invalid or unexpected token</span>
+<span class="token punctuation">{</span><span class="token string">&quot;a&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">;</span><span class="token comment">// Uncaught SyntaxError: Unexpected token &apos;:&apos;</span>
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;objectprototypetostringcall&#x5224;&#x65AD;"><a name="&#x4F7F;&#x7528;objectprototypetostringcall&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;objectprototypetostringcall&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;<code>Object.prototype.toString.call()</code>&#x5224;&#x65AD;</h3>
+<pre class="language-"><code class="lang-js"><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">)</span> <span class="token comment">// &quot;[object Number]&quot;</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// &quot;[object Array]&quot;</span>
+<span class="token comment">// &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// &quot;[object Function]&quot;</span>
+<span class="token comment">// &#x51FD;&#x6570;&#x58F0;&#x660E;</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>testF<span class="token punctuation">)</span> <span class="token comment">// &quot;[object Function]&quot;</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">&quot;str&quot;</span><span class="token punctuation">)</span> <span class="token comment">// &quot;[object String]&quot;</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">// &quot;[object Number]&quot;</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token comment">// &quot;[object Null]&quot;</span>
+</code></pre>
+<h3 id="&#x6570;&#x7EC4;&#x7279;&#x6B8A;&#x5224;&#x65AD;"><a name="&#x6570;&#x7EC4;&#x7279;&#x6B8A;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x7279;&#x6B8A;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;&#x7279;&#x6B8A;&#x5224;&#x65AD;</h3>
+<p><strong>&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x662F;ES5&#x4E4B;&#x540E;&#x624D;&#x6709;&#x7684;&#xFF0C;&#x6E38;&#x620F;&#x5F00;&#x53D1;&#x7684;&#x8BDD;&#xFF0C;&#x5E94;&#x8BE5;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x822C;&#x662F;ES5&#x548C;ES6&#x89C4;&#x8303;</strong></p>
+<pre class="language-"><code class="lang-js">Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre>
+<h3 id="nan&#x7279;&#x6B8A;&#x5224;&#x65AD;"><a name="nan&#x7279;&#x6B8A;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#nan&#x7279;&#x6B8A;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>NaN&#x7279;&#x6B8A;&#x5224;&#x65AD;</h3>
+<pre class="language-"><code class="lang-js"><span class="token function">isNaN</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;"><a name="&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;</h3>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">testFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;testFunc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> testArr <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;NaN&quot;</span><span class="token operator">:</span> <span class="token number">NaN</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;null&quot;</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;undefined&quot;</span><span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;1&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;[1,2]&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;testFunc&quot;</span><span class="token operator">:</span> testFunc<span class="token punctuation">,</span>
+    <span class="token string">&quot;testFunc2&quot;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;testFunc2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;obj&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;a&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;boolean&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;strxxxx&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token keyword">in</span> testArr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;typeof ==&gt;&quot;</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> <span class="token keyword">typeof</span> testArr<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;instanceof Object ==&gt;&quot;</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> testArr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Object.prototype.toString.call() ==&gt;&quot;</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>testArr<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;constructor ==&gt;&quot;</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> testArr<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code>// &#x4E0B;&#x9762;&#x662F;&#x8F93;&#x51FA;&#x7ED3;&#x679C;
+typeof ==&gt; 1 number
+instanceof Object ==&gt; 1 false
+Object.prototype.toString.call() ==&gt; 1 [object Number]
+constructor ==&gt; 1 function Number() { [native code] }
+
+typeof ==&gt; NaN number
+instanceof Object ==&gt; NaN false
+Object.prototype.toString.call() ==&gt; NaN [object Number]
+constructor ==&gt; NaN function Number() { [native code] }
+
+typeof ==&gt; null object
+instanceof Object ==&gt; null false
+Object.prototype.toString.call() ==&gt; null [object Null]
+TypeError: Cannot read property &apos;__proto__&apos; of null
+    at Object.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>anonymous</span><span class="token punctuation">&gt;</span></span> (/Users/tu/self/learn/learn-js/test-types/main.js:23:54)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+
+typeof ==&gt; undefined undefined
+instanceof Object ==&gt; undefined false
+Object.prototype.toString.call() ==&gt; undefined [object Undefined]
+TypeError: Cannot read property &apos;__proto__&apos; of undefined
+    at Object.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>anonymous</span><span class="token punctuation">&gt;</span></span> (/Users/tu/self/learn/learn-js/test-types/main.js:23:54)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+
+typeof ==&gt; [1,2] object
+instanceof Object ==&gt; [1,2] true
+Object.prototype.toString.call() ==&gt; [1,2] [object Array]
+constructor ==&gt; [1,2] function Array() { [native code] }
+
+typeof ==&gt; testFunc function
+instanceof Object ==&gt; testFunc true
+Object.prototype.toString.call() ==&gt; testFunc [object Function]
+constructor ==&gt; testFunc function Function() { [native code] }
+
+typeof ==&gt; testFunc2 function
+instanceof Object ==&gt; testFunc2 true
+Object.prototype.toString.call() ==&gt; testFunc2 [object Function]
+constructor ==&gt; testFunc2 function Function() { [native code] }
+
+typeof ==&gt; obj object
+instanceof Object ==&gt; obj true
+Object.prototype.toString.call() ==&gt; obj [object Object]
+constructor ==&gt; obj function Object() { [native code] }
+
+typeof ==&gt; boolean boolean
+instanceof Object ==&gt; boolean false
+Object.prototype.toString.call() ==&gt; boolean [object Boolean]
+constructor ==&gt; boolean function Boolean() { [native code] }
+
+typeof ==&gt; string string
+instanceof Object ==&gt; string false
+Object.prototype.toString.call() ==&gt; string [object String]
+constructor ==&gt; string function String() { [native code] }
+</code></pre><h3 id="&#x7ED3;&#x8BBA;"><a name="&#x7ED3;&#x8BBA;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED3;&#x8BBA;</h3>
+<p>js&#x4E2D;&#x6700;&#x597D;&#x7684;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x662F;&#x4F7F;&#x7528;<code>Object.prototype.toString.call()</code>&#x6765;&#x5224;&#x65AD;&#xFF0C;&#x56E0;&#x4E3A;
+&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x80FD;&#x5224;&#x65AD;&#x5927;&#x90E8;&#x5206;&#x7C7B;&#x578B;&#xFF0C;&#x552F;&#x4E00;&#x4E0D;&#x80FD;&#x533A;&#x5206;&#x7684;&#x662F;<code>NaN</code>&#x548C;<code>Number</code>,&#x56E0;&#x4E3A;<code>NaN</code>&#x4E5F;&#x662F;<code>Number</code>.
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8DDF;<code>isNaN(number)</code>&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="js-var-let.html" class="navigation navigation-prev " aria-label="Previous page: var 和 let">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../data-struct/" class="navigation navigation-next " aria-label="Next page: 数据结构与算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"类型判断","date":"2019-12-17T21:36:28.000Z","tags":["js","类型判断"],"level":"1.3.2","depth":2,"next":{"title":"数据结构与算法","level":"1.4","depth":1,"path":"data-struct/README.md","ref":"data-struct/README.md","articles":[]},"previous":{"title":"var 和 let","level":"1.3.1","depth":2,"path":"javascript/js-var-let.md","ref":"javascript/js-var-let.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","expandable-chapters","splitter","prism","mermaid-gb3","todo","code","advanced-emoji","flexible-alerts","ancre-navigation","livereload"],"pluginsConfig":{"prism":{},"livereload":{},"todo":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/js-typecheck.md","mtime":"2019-12-17T13:36:59.748Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-02T11:09:10.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

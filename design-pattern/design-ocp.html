@@ -1,0 +1,561 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开闭原则 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../javascript/" />
+    
+    
+    <link rel="prev" href="design-flyweight.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="design-command.html">
+            
+                <a href="design-command.html">
+            
+                    
+                    命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="design-flyweight.html">
+            
+                <a href="design-flyweight.html">
+            
+                    
+                    享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="design-ocp.html">
+            
+                <a href="design-ocp.html">
+            
+                    
+                    开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../javascript/js-var-let.html">
+            
+                <a href="../javascript/js-var-let.html">
+            
+                    
+                    var 和 let
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../javascript/js-typecheck.html">
+            
+                <a href="../javascript/js-typecheck.html">
+            
+                    
+                    类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../data-struct/">
+            
+                <a href="../data-struct/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../cocoscreator/">
+            
+                <a href="../cocoscreator/">
+            
+                    
+                    CocosCreator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../cocoscreator/modify-cocoscreator-web.html">
+            
+                <a href="../cocoscreator/modify-cocoscreator-web.html">
+            
+                    
+                    修改CocosCreator预览网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../c-sharp/">
+            
+                <a href="../c-sharp/">
+            
+                    
+                    C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../others/">
+            
+                <a href="../others/">
+            
+                    
+                    未分类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../others/cmake-tutor.html">
+            
+                <a href="../others/cmake-tutor.html">
+            
+                    
+                    CMake学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../others/git-commands.html">
+            
+                <a href="../others/git-commands.html">
+            
+                    
+                    Git命令总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../others/svn-cmd-add.html">
+            
+                <a href="../others/svn-cmd-add.html">
+            
+                    
+                    svn-add批量脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../others/get-wxgame-code.html">
+            
+                <a href="../others/get-wxgame-code.html">
+            
+                    
+                    获取微信小游戏源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >开闭原则</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5F00;&#x95ED;&#x539F;&#x5219;"><b></b>&#x5F00;&#x95ED;&#x539F;&#x5219;</a></li><ul><li><span class="title-icon "></span><a href="#&#x542B;&#x4E49;"><b></b>&#x542B;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x5F71;&#x54CD;"><b></b>&#x5F71;&#x54CD;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><b></b>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</a></li></ul></ul></div><a href="#&#x5F00;&#x95ED;&#x539F;&#x5219;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5F00;&#x95ED;&#x539F;&#x5219;"><a name="&#x5F00;&#x95ED;&#x539F;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x95ED;&#x539F;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x95ED;&#x539F;&#x5219;</h1>
+<p>&#x5F00;&#x95ED;&#x539F;&#x5219;(Open Closed Principle, OCP)</p>
+<h2 id="&#x542B;&#x4E49;"><a name="&#x542B;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x542B;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542B;&#x4E49;</h2>
+<p>&#x5F53;&#x5E94;&#x7528;&#x7684;&#x9700;&#x6C42;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x8F6F;&#x4EF6;&#x5B9E;&#x4F53;&#x6E90;&#x4EE3;&#x7801;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#x4EE3;&#x7801;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x5176;&#x6EE1;&#x8DB3;&#x65B0;&#x7684;&#x9700;&#x6C42;&#x3002;</p>
+<h2 id="&#x5F71;&#x54CD;"><a name="&#x5F71;&#x54CD;" class="anchor-navigation-ex-anchor" href="#&#x5F71;&#x54CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F71;&#x54CD;</h2>
+<ol>
+<li>&#x6D4B;&#x8BD5;
+&#x5982;&#x679C;&#x8F6F;&#x4EF6;&#x9075;&#x5FAA;&#x5F00;&#x95ED;&#x539F;&#x5219;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x9700;&#x8981;&#x5BF9;&#x6269;&#x5C55;&#x7684;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#xFF0C;&#x539F;&#x6765;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x3002;</li>
+<li>&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x590D;&#x7528;&#x6027;
+&#x7C92;&#x5EA6;&#x8D8A;&#x5C0F;&#xFF0C;&#x88AB;&#x590D;&#x7528;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x5C31;&#x8D8A;&#x5927;&#xFF0C;&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x539F;&#x5B50;&#x548C;&#x62BD;&#x8C61;&#x7F16;&#x7A0B;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x590D;&#x7528;&#x6027;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x8F6F;&#x4EF6;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;
+&#x7A33;&#x5B9A;&#x6027;&#x9AD8;&#xFF0C;&#x5EF6;&#x7EED;&#x6027;&#x5F3A;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6613;&#x4E8E;&#x6269;&#x5C55;&#x548C;&#x7EF4;&#x62A4;&#x3002;<h2 id="&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><a name="&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h2>
+&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&quot;&#x62BD;&#x8C61;&#x7EA6;&#x675F;&#xFF0C;&#x5C01;&#x88C5;&#x53D8;&#x5316;&quot;&#x6765;&#x5B9E;&#x73B0;&#x5F00;&#x95ED;&#x539F;&#x5219;&#x3002;
+&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6E32;&#x67D3;&#x7CFB;&#x7EDF;&#xFF0C;&#x5927;&#x6982;&#x8868;&#x793A;&#x4E0B;OCP&#x7684;&#x5B9E;&#x73B0;&#x548C;&#x4F7F;&#x7528;&#x3002;
+```
+abstract class DisplayObject{
++disply()
+}
+class Label{
++disply()
+}
+class Sprite{
++disply()
+}
+class DisplayManager{</li>
+<li>displayObjects<displayobject>
+}
+DisplayObject &lt;|- Label
+DisplayObject &lt;|- Sprite
+DisplayManager --&gt; DisplayObject</displayobject></li>
+</ol>
+<p>```</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="design-flyweight.html" class="navigation navigation-prev " aria-label="Previous page: 享元模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../javascript/" class="navigation navigation-next " aria-label="Next page: JavaScript">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开闭原则","date":"2019-10-29T21:42:32.000Z","tags":"设计模式","level":"1.2.3","depth":2,"next":{"title":"JavaScript","level":"1.3","depth":1,"path":"javascript/README.md","ref":"javascript/README.md","articles":[{"title":"var 和 let","level":"1.3.1","depth":2,"path":"javascript/js-var-let.md","ref":"javascript/js-var-let.md","articles":[]},{"title":"类型判断","level":"1.3.2","depth":2,"path":"javascript/js-typecheck.md","ref":"javascript/js-typecheck.md","articles":[]}]},"previous":{"title":"享元模式","level":"1.2.2","depth":2,"path":"design-pattern/design-flyweight.md","ref":"design-pattern/design-flyweight.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","expandable-chapters","splitter","prism","mermaid-gb3","todo","code","advanced-emoji","flexible-alerts","ancre-navigation","livereload"],"pluginsConfig":{"prism":{},"livereload":{},"todo":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"design-pattern/design-ocp.md","mtime":"2020-03-31T12:06:36.933Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-02T11:09:10.921Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
