@@ -1,0 +1,6 @@
+gitbook build
+cp -rf ./_book/ ../online
+cd ../online
+git add *
+git commit -m "new blog"
+git push -u origin master
