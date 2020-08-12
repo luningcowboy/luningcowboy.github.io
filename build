@@ -1,4 +1,7 @@
 gitbook build
+bakfile=../online.bak.$(date "+%Y%m%d%H%M%S")
+mkdir $bakfile
+cp -rf ../online $bakfile
 cp -rf ./_book/ ../online
 cd ../online
 git add *
