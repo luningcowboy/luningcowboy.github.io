@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>git tag · GitBook</title>
+        <title>Git查看某个文件的修改历史 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -93,10 +93,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="tmux.html" />
     
-    
-    <link rel="prev" href="git-stash.html" />
+    <link rel="prev" href="git-other.html" />
     
 
     </head>
@@ -404,7 +402,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9.6" data-path="git-tag.html">
+        <li class="chapter " data-level="1.9.6" data-path="git-tag.html">
             
                 <a href="git-tag.html">
             
@@ -469,7 +467,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.11" data-path="git-log.html">
+        <li class="chapter active" data-level="1.9.11" data-path="git-log.html">
             
                 <a href="git-log.html">
             
@@ -517,7 +515,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >git tag</a>
+        <a href=".." >Git查看某个文件的修改历史</a>
     </h1>
 </div>
 
@@ -532,34 +530,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#git-tag"><b></b>git tag</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B0;&#x5EFA;tag"><b></b>&#x65B0;&#x5EFA;tag</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;tag&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;"><b></b>&#x67E5;&#x770B;tag&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x663E;&#x793A;tag&#x5217;&#x8868;"><b></b>&#x663E;&#x793A;tag&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x7ED9;&#x67D0;&#x4E2A;commit&#x6DFB;&#x52A0;tag"><b></b>&#x7ED9;&#x67D0;&#x4E2A;commit&#x6DFB;&#x52A0;tag</a></li><li><span class="title-icon "></span><a href="#&#x63A8;&#x9001;tag&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"><b></b>&#x63A8;&#x9001;tag&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;tag"><b></b>&#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;tag</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x67D0;&#x4E2A;tag"><b></b>&#x5220;&#x9664;&#x67D0;&#x4E2A;tag</a></li></ul></ul></div><a href="#git-tag" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git-tag"><a name="git-tag" class="anchor-navigation-ex-anchor" href="#git-tag"><i class="fa fa-link" aria-hidden="true"></i></a>git tag</h1>
-<h2 id="&#x65B0;&#x5EFA;tag"><a name="&#x65B0;&#x5EFA;tag" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;tag"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;tag</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;"><b></b>Git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;</a></li></ul></div><a href="#git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;"><a name="git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>Git&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x5386;&#x53F2;</h1>
 <ol>
-<li>&#x4F7F;&#x7528;<code>git tag <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span></code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;<code>tag</code></li>
-<li>&#x6DFB;&#x52A0;<code>-a</code>&#x53C2;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x5907;&#x6CE8;&#x7684;tag,&#x5907;&#x6CE8;&#x4FE1;&#x606F;&#x7528;-m&#x6307;&#x5B9A;:<code>git tag -a TagName -m &quot;my tag&quot;</code></li>
+<li><code>git log filename</code> &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x7684;<code>commit</code>&#x8BB0;&#x5F55;</li>
+<li><code>git log -p filename</code> &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x7684;<code>diff</code></li>
+<li>&#x67E5;&#x770B;&#x67D0;&#x6B21;<code>commit</code>&#x63D0;&#x4EA4;&#x4E2D;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;: <code>git show 2239ca740735dcbd2c04cd76be2637a2a4b2cfb0 filename</code></li>
 </ol>
-<h2 id="&#x67E5;&#x770B;tag&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x770B;tag&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;tag&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;tag&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</h2>
-<p><code>git show tagName</code></p>
-<h2 id="&#x663E;&#x793A;tag&#x5217;&#x8868;"><a name="&#x663E;&#x793A;tag&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x663E;&#x793A;tag&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x663E;&#x793A;tag&#x5217;&#x8868;</h2>
-<ol>
-<li><code>git tag</code></li>
-<li><code>git tag -l &quot;v1.1.*&quot;</code></li>
-</ol>
-<h2 id="&#x7ED9;&#x67D0;&#x4E2A;commit&#x6DFB;&#x52A0;tag"><a name="&#x7ED9;&#x67D0;&#x4E2A;commit&#x6DFB;&#x52A0;tag" class="anchor-navigation-ex-anchor" href="#&#x7ED9;&#x67D0;&#x4E2A;commit&#x6DFB;&#x52A0;tag"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED9;&#x67D0;&#x4E2A;commit&#x6DFB;&#x52A0;tag</h2>
-<p><code>git tag -a v1.1 a512768 -m &quot;my tag&quot;</code></p>
-<h2 id="&#x63A8;&#x9001;tag&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"><a name="&#x63A8;&#x9001;tag&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x63A8;&#x9001;tag&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A8;&#x9001;tag&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</h2>
-<ol>
-<li>&#x63A8;&#x9001;&#x6307;&#x5B9A;tag:<code>git push origin tagName</code></li>
-<li>&#x63A8;&#x9001;&#x6240;&#x6709;tag:<code>git push origin --tags</code></li>
-</ol>
-<h2 id="&#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;tag"><a name="&#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;tag" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;tag"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;tag</h2>
-<p><code>git checkout v1.0.1</code>
-<strong>&#x8FD9;&#x65F6;&#x5019;&#x4E0D;&#x4F4D;&#x4E8E;&#x4EFB;&#x4F55;&#x5206;&#x652F;&#x4E0B;&#xFF0C;&#x5904;&#x4E8E;&#x6E38;&#x79BB;&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x5F53;&#x524D;tag&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5206;&#x652F;</strong></p>
-<h2 id="&#x5220;&#x9664;&#x67D0;&#x4E2A;tag"><a name="&#x5220;&#x9664;&#x67D0;&#x4E2A;tag" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x67D0;&#x4E2A;tag"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x67D0;&#x4E2A;tag</h2>
-<ol>
-<li>&#x672C;&#x5730;&#x5220;&#x9664;: <code>git tag -d v1.0.1</code></li>
-<li>&#x8FDC;&#x7AEF;&#x5220;&#x9664;: <code>git push origin:refs/tags/tagName</code></li>
-</ol>
+<p><em>&#x6CE8;&#x610F;: <code>filename</code>&#x662F;&#x6307;&#x8981;&#x67E5;&#x770B;&#x7684;&#x6587;&#x4EF6;</em></p>
 
                                 
                                 </section>
@@ -587,14 +564,10 @@
 
             
                 
-                <a href="git-stash.html" class="navigation navigation-prev " aria-label="Previous page: git stash">
+                <a href="git-other.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Git使用中遇到的问题">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="tmux.html" class="navigation navigation-next " aria-label="Next page: tmux">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -603,7 +576,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git tag","level":"1.9.6","depth":2,"next":{"title":"tmux","level":"1.9.7","depth":2,"path":"others/tmux.md","ref":"others/tmux.md","articles":[]},"previous":{"title":"git stash","level":"1.9.5","depth":2,"path":"others/git-stash.md","ref":"others/git-stash.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","expandable-chapters","splitter","prism","mermaid-gb3","todo","code","advanced-emoji","flexible-alerts","ancre-navigation"],"pluginsConfig":{"prism":{},"todo":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"others/git-tag.md","mtime":"2020-08-13T03:23:03.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-09T03:43:14.565Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git查看某个文件的修改历史","level":"1.9.11","depth":2,"previous":{"title":"Git使用中遇到的问题","level":"1.9.10","depth":2,"path":"others/git-other.md","ref":"others/git-other.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","expandable-chapters","splitter","prism","mermaid-gb3","todo","code","advanced-emoji","flexible-alerts","ancre-navigation"],"pluginsConfig":{"prism":{},"todo":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"others/git-log.md","mtime":"2020-10-09T03:40:43.840Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-09T03:43:14.565Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
